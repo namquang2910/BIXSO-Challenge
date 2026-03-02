@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     # LLM — supports "anthropic" (Claude 3.5 Sonnet) or "openai" (GPT-4o-mini)
     anthropic_api_key: str = ""
     openai_api_key: str = ""
-    google_api_key: str = "AIzaSyAjD8pFv6rx4dy6itQi0Mc4pY4g2R-zBHA"
+    google_api_key: str = ""
     llm_provider: str = "ollama"
     llm_model: str = "llama3.2"
     ollama_url: str = "http://localhost:11434"
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     qdrant_collection: str = "user_documents"
 
     # Embeddings — OpenAI text-embedding-3-small via LangChain
-    embedding_model: str = "text-embedding-3-small"
+    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
 
     # RAG chunking strategy
     chunk_size: int = 512    # characters per chunk

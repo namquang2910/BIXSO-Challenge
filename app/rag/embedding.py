@@ -1,4 +1,5 @@
 from langchain_huggingface import HuggingFaceEmbeddings
+from app.config import settings
 
 def _get_embeddings() -> HuggingFaceEmbeddings:
-    return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    return HuggingFaceEmbeddings(model_name=settings.embedding_model)

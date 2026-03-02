@@ -10,8 +10,9 @@ Requires the FastAPI backend running at:
 import requests
 import streamlit as st
 import time
+import os 
 
-API_BASE = "http://localhost:8000"
+API_BASE = os.getenv("API_BASE", "http://localhost:8000")
 SAMPLE_USERS = {
     "Alice (user_id=1) · 250 tokens · Premium": 1,
     "Bob   (user_id=2) · 50 tokens  · Basic":   2,

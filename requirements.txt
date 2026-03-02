@@ -11,21 +11,34 @@ psycopg2-binary
 pydantic
 pydantic-settings
 
-# ── LangChain core ────────────────────────────────────────────
+# ── LangChain core ─────────────────────────────────────────────
 langchain==0.3.13
 langchain-core==0.3.28
 langchain-community==0.3.13
 
-# ── LangChain LLM providers (choose one or both) ─────────────
-langchain-anthropic
-langchain-openai
-langchain-google-genai
-# ── LangChain text splitting ──────────────────────────────────
+# ── LangChain text splitting ────────────────────────────────────
 langchain-text-splitters==0.3.4
 
-# ── Qdrant vector store via LangChain ─────────────────────────
+# ── LangChain LLM providers (configure via LLM_PROVIDER in .env) ─
+langchain-anthropic          # LLM_PROVIDER=anthropic
+langchain-openai             # LLM_PROVIDER=openai
+langchain-google-genai       # LLM_PROVIDER=google
+langchain-ollama             # LLM_PROVIDER=ollama (default)
+
+# ── Embeddings (local, no API key required) ─────────────────────
+langchain-huggingface
+sentence-transformers        # all-MiniLM-L6-v2
+
+# ── Qdrant vector store via LangChain ──────────────────────────
 langchain-qdrant==0.2.0
 qdrant-client==1.12.1
+
+# ── PDF extraction ──────────────────────────────────────────────
+pypdf
+
+# ── Streamlit UI ────────────────────────────────────────────────
+streamlit
+requests
 
 # Testing
 pytest==8.3.4
@@ -33,4 +46,4 @@ pytest-asyncio==0.24.0
 
 # Utilities
 python-dotenv==1.0.1
-
+python-multipart
