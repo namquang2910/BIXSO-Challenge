@@ -3,7 +3,8 @@
 An AI-powered educational assistant built with **FastAPI + LangChain + Qdrant + PostgreSQL**. It routes natural language queries to the right tool — SQL for account/course data, RAG for uploaded documents — while enforcing a token-based usage budget.
 ---
 ## Video Demo
-![Demo][ui.jpg]
+![Demo](ui.jpg)
+
 Link: https://youtu.be/jLzs-TdK1oM
 
 ## How It Works
