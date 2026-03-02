@@ -22,7 +22,8 @@ class Settings(BaseSettings):
 
     # Embeddings — OpenAI text-embedding-3-small via LangChain
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
-
+    #Streamlit
+    api_base: str = "http://localhost:8000"
     # RAG chunking strategy
     chunk_size: int = 512    # characters per chunk
     chunk_overlap: int = 64  # character overlap between chunks
