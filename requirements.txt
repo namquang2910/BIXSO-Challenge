@@ -1,0 +1,36 @@
+# Core API framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# Database (PostgreSQL async)
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+psycopg2-binary
+
+# Configuration
+pydantic
+pydantic-settings
+
+# ── LangChain core ────────────────────────────────────────────
+langchain==0.3.13
+langchain-core==0.3.28
+langchain-community==0.3.13
+
+# ── LangChain LLM providers (choose one or both) ─────────────
+langchain-anthropic
+langchain-openai
+langchain-google-genai
+# ── LangChain text splitting ──────────────────────────────────
+langchain-text-splitters==0.3.4
+
+# ── Qdrant vector store via LangChain ─────────────────────────
+langchain-qdrant==0.2.0
+qdrant-client==1.12.1
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+
+# Utilities
+python-dotenv==1.0.1
+
